@@ -1,0 +1,156 @@
+/*Game page*/
+body {
+    background-color: #AF82BA;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ #star {
+    position: absolute;
+    margin-left: 280px;
+}
+
+ .page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+ .column {
+    display: flex;
+    flex-direction: column;
+}
+
+ .grid {
+    width: 400px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+    border: 4px solid purple;
+}
+
+ .grid div:not(.border) {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+ p {
+    color: #512DA8;
+    font-family: "arial";
+}
+
+ #title_next {
+    margin-top: 30px;
+    margin-right: 100px;
+    position: absolute;
+}
+
+ .next-grid {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+    border: 4px solid darkblue;
+    margin-top: 60px;
+}
+
+ .next-grid div {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+ #title_hold {
+    margin-top: 378px;
+    margin-right: 100px;
+    position: absolute;
+}
+
+ .hold-grid {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+    border: 4px solid #512DA8;
+    margin-top: 180px;
+}
+
+ .hold-grid div {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+ /*Tetrominos*/
+.cyan{
+    background-color: #00FFFF
+}
+
+ .red{
+    background-color: #B80F0A
+}
+
+ .green{
+    background-color: #008000
+}
+
+ .purple{
+    background-color: #8A00C2
+}
+
+ .yellow{
+    background-color: #DAA520
+}
+
+ .orange{
+    background-color: #EB6123
+}
+
+ .blue{
+    background-color: #0041C2
+}
+
+ /*Buttons*/
+#start-button {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: purple;
+    color: lightgrey;
+    cursor: pointer;
+}
+
+ #start-button:hover {
+    background-color: darkblue;
+}
+
+ #reset-button {
+  background-color: #B90E0A;
+  margin-top: 70px;
+  margin-left: 30px;
+  color: lightgrey;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px darkslategray;
+}
+
+ #reset-button:hover {
+    background-color: #900009;
+    box-shadow: none;
+}
