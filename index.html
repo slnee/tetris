@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="my_tetris.js" defer></script>
+    <script src="pieces.js" defer></script>
+</head>
+
+ <body>
+    <canvas id="star" width="200" height="140">
+    </canvas>
+
+     <script>
+            var canvas=document.getElementById("star")
+            var ctx=canvas.getContext("2d")
+            best_score = 0
+        
+            function draw_star(){
+                ctx.clearRect(0,0,star.width, star.height)
+
+                 ctx.fillStyle = "#AF82BA"
+                ctx.strokeStyle = "darkblue"
+                ctx.lineWidth = 5
+                ctx.beginPath()
+                ctx.moveTo(68, 5)
+                ctx.lineTo(87, 46)
+                ctx.lineTo(133, 51)
+                ctx.lineTo(100, 82)
+                ctx.lineTo(107, 125)
+                ctx.lineTo(68, 104)
+                ctx.lineTo(29, 125)
+                ctx.lineTo(37, 82)
+                ctx.lineTo(6, 51)
+                ctx.lineTo(49, 45)
+                ctx.lineTo(68, 5)
+                ctx.closePath()
+                ctx.stroke()
+                ctx.fill()
+
+                 ctx.fillStyle = "black"
+                ctx.font = "12px Arial"
+                ctx.textAlign = "center"
+                ctx.fillText("Best score :", 68, 65)
+                ctx.fillText(best_score, 68, 85)
+            }
+
+             draw_star()
+        </script>
+
+     <button id="start-button">Start / Pause</button>
+    <h2>Score : <span id="score">0</span></h2>
+
+     <div class="page">
+
+         <div class="column">
+            <div class="grid"></div>
+            <p>Use QSD or the directional arrows to move, Z or up to rotate 
+            <br> Use E or + to hold and right-shift or A to hard drop
+            <br><br>Line -> +10 / Hard Drop -> +2</p>
+
+         </div>
+            
+        <div class="column">
+            <h3 id="title_next">Next :</h3>
+            <div class="next-grid"></div>
+            <h3 id="title_hold">Hold :</h3>
+            <div class="hold-grid"></div>   
+
+             <button id="reset-button">Reset</button>
+        </div>
+    </div>
+
+ </body>
+</html>
